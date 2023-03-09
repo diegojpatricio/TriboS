@@ -1,0 +1,11 @@
+stages:
+  - functional
+
+Functional:
+  image: gradle:5.2-jdk11
+  tags:
+    - autoscaling_uat_old
+  stage: functional
+  script:
+    - gradle clean test --stacktrace
+
